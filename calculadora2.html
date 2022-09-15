@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="calculadora2.css">
+
+        <title>calculadora2</title>
+
+        <script>
+            function caracter(num)
+            {
+                numero = document.getElementById('resultado').innerHTML;
+                document.getElementById('resultado').innerHTML= numero + num;
+            }
+
+            function clea()
+            {
+                 document.getElementById('resultado').innerHTML="";
+            }
+
+            function calcular()
+            {
+                resultado = document.getElementById('resultado').innerHTML;
+                if (resultado)
+                {
+                    document.getElementById('resultado').innerHTML = eval(resultado);
+                }
+            }
+        </script>
+</head>
+<body class="fundo">
+    <div class="calculadora">
+        <h1>Calculadora</h1>
+        <p id="resultado"></p>
+        <table>
+            <tr>
+                <td><input type="button" name="but" class="botao" value="1" onclick="caracter('1');"></td>
+                <td><input type="button" name="but" class="botao" value="2" onclick="caracter('2');"></td>
+                <td><input type="button" name="but" class="botao" value="3" onclick="caracter('3');"></td>
+                <td><input type="button" name="but" class="botao" value="X" onclick="caracter('*');"></td>
+            </tr>
+
+
+            <tr>
+                <td><input type="button" name="but" class="botao"  value="4" onclick="caracter('4');"></td>
+                <td><input type="button" name="but" class="botao" value="5" onclick="caracter('5');"></td>
+                <td><input type="button" name="but" class="botao" value="6" onclick="caracter('6');"></td>
+                <td><input type="button" name="but" class="botao" value="+" onclick="caracter('+');"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" name="but" class="botao" value="7" onclick="caracter('7');"></td>
+                <td><input type="button" name="but" class="botao" value="8" onclick="caracter('8');"></td>
+                <td><input type="button" name="but" class="botao" value="9" onclick="caracter('9');"></td>
+                <td><input type="button" name="but" class="botao" value="-" onclick="caracter('-');"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" name="but" class="botao" value="AC" onclick="clea();"></td>
+                <td><input type="button" name="but" class="botao" value="," onclick="caracter(',');"></td>
+                <td><input type="button" name="but" class="botao" value="0" onclick="caracter('0');"></td>
+                <td><input type="button" name="but" class="botao" value="/" onclick="caracter('/');"></td>
+                <td rowspan="4"><input style="height=212px" type="button" name="but" class="botao" value="=" onclick="calcular();"></td>
+                
+            </tr>
+        </table>
+
+
+
+
+
+    </div>
+</body>
+</html>
